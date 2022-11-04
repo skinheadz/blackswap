@@ -1,0 +1,9 @@
+
+.navbar {
+    background-color:rgba(0, 0, 0, 0.699);
+    background-image:url(https://www.zingerbugimages.com/backgrounds/pink_and_blue_stars.gif);
+    background-position:top left;
+    background-repeat:repeat;
+    background-attachment:fixed;
+    background-blend-mode: overlay;
+}
