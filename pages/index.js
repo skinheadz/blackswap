@@ -7,7 +7,7 @@ import {useState} from 'react'
 export async function getStaticProps() {
   console.log("initializing");
   try {
-    const response = await fetch('https://cdn.furucombo.app/furucombo.tokenlist.json');
+    const response = await fetch('https://gateway.ipfs.io/ipns/tokens.uniswap.org');
     const tokenListJSON = await response.json();
     if (tokenListJSON) return {props: tokenListJSON};
   } catch (error) { console.log('NO PROPS(!): error fetching: ', error);}
