@@ -197,6 +197,7 @@ export default function SwapBox(props) {
                                         {/* list */}
                                  <ul className="overflow-y-auto py-1 h-48 ">
                                     {props.tokens.map((tokenInfo) => (
+                                    tokenInfo.chainId == 1 && (
                                     <a key={tokenInfo.symbol} href='#' onClick={() => selectToken(tokenInfo)}>
                                         {/* if searchq doesnt exist show full list */}
                                         {!searchq ? <li className="flex" key={tokenInfo.symbol}>
@@ -206,7 +207,8 @@ export default function SwapBox(props) {
                                         tokenInfo.symbol.toLowerCase().includes(searchq) &&
                                         <li className="flex" key={tokenInfo.symbol}> 
                                             <img key={tokenInfo.symbol} className="mr-2 w-6 h-6 rounded-full" src={tokenInfo.logoURI} alt='logo'/>{tokenInfo.symbol}</li>}
-                                    </a>))}
+                                    </a>)
+                                    ))}
 
                                 </ul>
 
